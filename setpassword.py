@@ -17,6 +17,8 @@ def set_password_policy(length, complexity):
     os.remove('c:\\Password.sdb')
     os.remove('c:\\Password.log')
     os.remove('c:\\Password.jfm')
-
+    
+# 调用设置密码策略的函数
+set_password_policy(8, 1)
 # 强制更新组策略
 subprocess.run('gpupdate /force', shell=True)
